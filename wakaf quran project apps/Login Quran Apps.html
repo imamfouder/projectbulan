@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quran App Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Quran Apps by Ruangbimbel😊</h1>
+    <p>Asalamu Alaikum !!!</p>
+    <h2>Masuk</h2>
+
+    <input type="text" id="username" placeholder="Nama" class="input-field">
+
+    <div class="password-wrapper">
+      <input type="password" id="password" placeholder="Password" class="input-field">
+      <span class="toggle-password" onclick="togglePasswordVisibility()">👁️</span>
+    </div>
+    
+    <button class="sign-in-btn" onclick="login()">Masuk</button>
+
+    
+    <p>Don't have an account? <a href="#">Register here</a></p>
+    <p>Untuk demo,gunakan nama:Amirah Salsabila password:User#1</p>
+  </div>
+
+  <script>
+    function togglePasswordVisibility() {
+      const passwordField = document.getElementById('password');
+      passwordField.type = (passwordField.type === 'password') ? 'text' : 'password';
+    }
+
+    function login() {
+      // Ambil nilai dari input
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Data login uji coba
+      const validUsername = "Amirah Salsabila";
+      const validPassword = "User#1";
+
+      // Cek kecocokan
+      if (username === validUsername && password === validPassword) {
+        alert("Login berhasil!");
+        window.location.href = "New Quran apps.html"; // Arahkan ke halaman setelah login
+      } else {
+        alert("Demo login salah!");
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f9f9f9;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      width: 300px;
+    }
+
+    h1 {
+      color: purple;
+      font-size: 24px;
+    }
+
+    p {
+      color: purple;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .input-field {
+      width: 92%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #e1bee7;
+    }
+
+    .password-wrapper {
+      position: relative;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .sign-in-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #ba68c8;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .sign-in-btn:hover {
+      background-color: #9c27b0;
+    }
+
+    .social-login i {
+      font-size: 24px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+  </style>
+</body>
+</html>
